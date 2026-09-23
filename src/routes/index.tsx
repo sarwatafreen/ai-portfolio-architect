@@ -161,7 +161,7 @@ function Portfolio() {
           </div>
           <div className="relative mx-auto w-full max-w-7xl px-5 pb-14 sm:px-8 sm:pb-18">
             <div className="mb-8 flex items-center gap-3 text-xs font-bold uppercase text-muted-foreground"><span className="inline-block size-2 animate-pulse rounded-full bg-primary" /><span>Open to junior opportunities</span><span className="hidden text-border sm:inline">—</span><span className="hidden sm:inline">Karachi, Pakistan</span></div>
-            <h1 className="max-w-5xl font-display text-[clamp(3.7rem,9vw,8.4rem)] font-black uppercase leading-[0.84] text-foreground">
+            <h1 className="max-w-5xl font-display text-[2.8rem] font-black uppercase leading-[0.84] text-foreground sm:text-[clamp(3.7rem,9vw,8.4rem)]">
               Building the web <span className="text-outline">with intelligence.</span>
             </h1>
             <div className="mt-10 grid gap-8 md:grid-cols-[1fr_1.2fr] md:items-end">
