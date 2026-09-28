@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep curated portfolio facts in `src/lib/portfolio-data.ts` so the visible portfolio and grounded assistant share one source of truth.
+- The portfolio assistant is a single browser-local conversation; only its model request streams through `/api/chat`.
