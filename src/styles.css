@@ -34,6 +34,8 @@
   --color-footer: var(--footer);
   --color-footer-foreground: var(--footer-foreground);
   --color-ink: var(--ink);
+  --color-ink-foreground: var(--ink-foreground);
+  --color-ink-muted: var(--ink-muted);
   --color-porcelain: var(--porcelain);
   --color-cobalt: var(--cobalt);
   --color-teal: var(--teal);
@@ -65,6 +67,8 @@
   --footer: #01040f;
   --footer-foreground: #F5F7FA;
   --ink: #020617;
+  --ink-foreground: #F5F7FA;
+  --ink-muted: #A7B2C3;
   --porcelain: #F5F7FA;
   --cobalt: #3b82f6;
   --teal: #14b8a6;
