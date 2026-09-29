@@ -12,9 +12,10 @@
 
 ## Client-ready portfolio expansion
 
-- [ ] Replace the neon visual system with the selected premium AI Architect direction.
-- [ ] Add the professional portrait treatment, ready for Sarwat's uploaded photo.
-- [ ] Add a real, grounded portfolio assistant with one browser-saved conversation.
-- [ ] Add technology, category, and project-type filters.
-- [ ] Add a searchable learning journal with structured article cards.
-- [ ] Verify assistant behavior, interactions, accessibility, and desktop/mobile layouts.
+- [x] Replace the neon visual system with the selected premium AI Architect direction.
+- [ ] Insert Sarwat's professional photo (waiting on upload; frame ready).
+- [x] Add a real, grounded portfolio assistant with one browser-saved conversation.
+- [x] Add technology, category, and project-type filters.
+- [x] Add a searchable learning journal with structured article cards.
+- [x] Verify assistant behavior, interactions, accessibility, and desktop/mobile layouts.
+- [ ] AI Content Studio app (uploaded brief) — start after portfolio sign-off.
