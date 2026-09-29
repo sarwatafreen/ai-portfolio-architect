@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ArrowUpRight, Layers3, RotateCcw } from "lucide-react";
+import { Layers3, RotateCcw } from "lucide-react";
 import aiStudioImage from "@/assets/ai-studio-showcase.jpg";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -42,9 +42,9 @@ export function ProjectExplorer() {
           { label: "Project type", value: type, set: setType, options: types },
         ].map((filter) => (
           <div key={filter.label}>
-            <label className="mb-2 block text-xs font-bold uppercase text-muted-foreground">{filter.label}</label>
+            <span id={`project-filter-${filter.label.replaceAll(" ", "-").toLowerCase()}`} className="mb-2 block text-xs font-bold uppercase text-muted-foreground">{filter.label}</span>
             <Select value={filter.value} onValueChange={filter.set}>
-              <SelectTrigger className="h-11 bg-card"><SelectValue /></SelectTrigger>
+              <SelectTrigger aria-labelledby={`project-filter-${filter.label.replaceAll(" ", "-").toLowerCase()}`} className="h-11 w-full bg-card"><SelectValue /></SelectTrigger>
               <SelectContent>{filter.options.map((option) => <SelectItem key={option} value={option}>{option}</SelectItem>)}</SelectContent>
             </Select>
           </div>
@@ -66,7 +66,7 @@ export function ProjectExplorer() {
             <article key={project.title} className="group overflow-hidden border border-border bg-card transition-colors hover:border-cobalt/50">
               {project.featured ? <div className="aspect-[16/9] overflow-hidden border-b border-border"><img src={aiStudioImage} alt="AI Content Studio interface concept" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]" width={1600} height={1000} /></div> : <div className="blueprint-grid grid aspect-[16/9] place-items-center border-b border-border"><span className="font-display text-5xl font-bold text-cobalt/70">{project.title.split(" ").map((word) => word[0]).join("")}</span></div>}
               <div className="p-6">
-                <div className="flex items-center justify-between gap-4"><span className="text-xs font-bold uppercase text-teal">{project.status}</span><ArrowUpRight className="size-4 text-muted-foreground" /></div>
+                <span className="text-xs font-bold uppercase text-teal">{project.status}</span>
                 <h3 className="mt-4 font-display text-2xl font-bold">{project.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">{project.summary}</p>
                 <div className="mt-6 flex flex-wrap gap-2">{project.technologies.map((tag) => <span key={tag} className="border border-border bg-secondary px-2.5 py-1 text-xs text-secondary-foreground">{tag}</span>)}</div>
