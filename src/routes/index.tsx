@@ -58,6 +58,7 @@ const navItems = [
   ["Skills", "#skills"],
   ["Work", "#work"],
   ["Journey", "#journey"],
+  ["Ask AI", "#assistant"],
 ] as const;
 
 const skillGroups = [
