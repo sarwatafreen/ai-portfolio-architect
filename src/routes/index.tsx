@@ -18,6 +18,9 @@ import {
   WandSparkles,
 } from "lucide-react";
 import aiStudioImage from "@/assets/ai-studio-showcase.jpg";
+import { ProjectExplorer } from "@/components/portfolio/ProjectExplorer";
+import { LearningJournal } from "@/components/portfolio/LearningJournal";
+import { PortfolioAssistant } from "@/components/portfolio/PortfolioAssistant";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -55,6 +58,7 @@ const navItems = [
   ["Skills", "#skills"],
   ["Work", "#work"],
   ["Journey", "#journey"],
+  ["Ask AI", "#assistant"],
 ] as const;
 
 const skillGroups = [
@@ -184,9 +188,10 @@ function Portfolio() {
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <SectionHeading index="01" eyebrow="About" title="Curious by nature. Intentional by design." />
             <div className="mt-14 grid gap-8 md:grid-cols-[1fr_2fr]">
-              <div className="relative min-h-72 overflow-hidden rounded-md border border-border bg-secondary">
-                <div className="absolute inset-0 dot-field" /><div className="absolute bottom-7 left-7 right-7"><span className="font-display text-7xl font-black text-primary">SA.</span><p className="mt-3 text-sm text-muted-foreground">Learner · Builder · Designer</p></div>
-              </div>
+              <figure className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-[4rem] border border-border bg-gradient-to-br from-cobalt/25 via-secondary to-teal/25">
+                {/* Portrait slot: replace this block with Sarwat's uploaded photo */}
+                <div className="absolute inset-0 blueprint-grid" /><figcaption className="absolute bottom-8 left-8 right-8"><span className="font-display text-7xl font-bold text-primary">SA.</span><p className="mt-3 text-sm text-muted-foreground">Learner · Builder · Designer</p></figcaption>
+              </figure>
               <div className="grid content-between gap-12">
                 <p className="font-display text-2xl font-semibold leading-snug text-foreground sm:text-3xl">I&apos;m a student and emerging developer focused on the space where modern frontend craft, visual thinking, and practical AI meet.</p>
                 <div className="grid gap-7 text-sm leading-7 text-muted-foreground sm:grid-cols-2"><p>I build with React, Next.js, TypeScript, and Tailwind CSS while deepening my understanding of APIs, authentication, and data-driven products.</p><p>My current learning explores generative AI, prompt engineering, MCP, RAG, and agent workflows — always with a focus on useful, human-centered experiences.</p></div>
@@ -218,6 +223,8 @@ function Portfolio() {
               <div className="rounded-md border border-border bg-card p-7 lg:col-span-2"><div className="flex items-center gap-3 text-primary"><ShoppingBag className="size-5" /><span className="text-xs font-bold uppercase">Product vision</span></div><h3 className="mt-6 font-display text-2xl font-bold">From service discovery to digital checkout</h3><div className="mt-6 grid gap-3 sm:grid-cols-2">{["Service and product catalog", "Individual product pages", "Cart and wishlist flows", "Accounts and order history", "Contact and inquiry forms", "AI-assisted service workflows"].map(item => <div key={item} className="flex items-center gap-3 text-sm text-muted-foreground"><Check className="size-4 text-primary" />{item}</div>)}</div></div>
               <div className="rounded-md border border-primary/40 bg-primary p-7 text-primary-foreground"><Rocket className="size-7" /><p className="mt-12 text-xs font-black uppercase">North star</p><p className="mt-3 font-display text-2xl font-bold">Make powerful creative tools feel simple, focused, and attainable.</p></div>
             </div>
+            <h3 className="mt-20 font-display text-3xl font-bold">Browse all projects</h3>
+            <ProjectExplorer />
           </div>
         </section>
 
@@ -234,6 +241,14 @@ function Portfolio() {
             <div className="mt-14 ml-3 border-l border-border">
               {[{ label: "Foundation", title: "Web & interface craft", text: "HTML, CSS, JavaScript, responsive layouts, UI/UX, and graphic design fundamentals." }, { label: "Now", title: "Modern product development", text: "React, Next.js, TypeScript, Tailwind CSS, APIs, authentication, and database integration." }, { label: "Exploring", title: "AI engineering workflows", text: "Prompt systems, RAG concepts, MCP, structured outputs, Pydantic, vectors, and agent workflows." }, { label: "Next", title: "Client-focused AI web services", text: "Turning technical and design skills into useful products for real businesses and creators." }].map((item, i) => <article key={item.label} className="relative grid gap-3 border-b border-border py-8 pl-8 md:grid-cols-[.7fr_1fr_1.5fr] md:items-center"><span className="absolute -left-2 top-10 size-4 rounded-full border-4 border-background bg-primary" /><span className="text-xs font-bold uppercase text-primary">{String(i + 1).padStart(2, "0")} / {item.label}</span><h3 className="font-display text-xl font-bold">{item.title}</h3><p className="text-sm leading-6 text-muted-foreground">{item.text}</p></article>)}
             </div>
+            <div className="mt-20"><h3 className="font-display text-3xl font-bold">Learning journal</h3><p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground">Structured notes on frontend development, AI workflows, and lessons learned.</p><LearningJournal /></div>
+          </div>
+        </section>
+
+        <section id="assistant" className="scroll-mt-24 bg-surface py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-5 sm:px-8">
+            <SectionHeading index="06" eyebrow="AI assistant" title="Ask anything about my work." intro="A real assistant grounded only in verified portfolio facts — skills, projects, services, learning, and how to get in touch." />
+            <div className="mt-14"><PortfolioAssistant /></div>
           </div>
         </section>
 
