@@ -66,25 +66,25 @@ const skillGroups = [
     number: "01",
     title: "Frontend",
     icon: Code2,
-    items: ["HTML & CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
+    items: ["HTML & CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Chakra UI", "Responsive design"],
   },
   {
     number: "02",
     title: "Backend & data",
     icon: Database,
-    items: ["Supabase", "Authentication", "Database concepts", "API integration"],
+    items: ["Supabase", "Authentication", "Database & API concepts", "Domains, hosting & SSL"],
   },
   {
     number: "03",
     title: "AI systems",
     icon: BrainCircuit,
-    items: ["Generative AI", "Prompt engineering", "AI automation", "MCP", "RAG concepts", "Agent workflows"],
+    items: ["Generative AI", "Prompt engineering", "AI automation", "MCP", "RAG concepts", "Agent workflows", "Pydantic", "Vector database concepts"],
   },
   {
     number: "04",
     title: "Design & tools",
     icon: Figma,
-    items: ["UI / UX", "Figma", "Graphic design", "Git & GitHub", "Vercel", "Responsive design"],
+    items: ["UI / UX", "Figma to React", "Graphic design", "Python", "Excel", "WordPress & Elementor (basic)", "Web3 concepts"],
   },
 ];
 
@@ -254,7 +254,7 @@ function Portfolio() {
 
         <section id="contact" className="scroll-mt-24 bg-primary py-24 text-primary-foreground sm:py-32">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
-            <div className="grid gap-10 lg:grid-cols-[1.8fr_1fr] lg:items-end"><div><p className="mb-6 text-xs font-black uppercase">Available for junior opportunities</p><h2 className="font-display text-5xl font-black uppercase leading-[.9] sm:text-7xl lg:text-8xl">Let&apos;s build something meaningful.</h2></div><div><p className="max-w-sm text-base leading-7 opacity-80">Based in Karachi and available for full-time junior roles, collaborations, and thoughtful web projects.</p><Button asChild variant="secondary" size="lg" className="mt-7"><a href="https://share.google/EhcQoDZuYhE8hUHw1" target="_blank" rel="noreferrer">View portfolio profile <ArrowUpRight /></a></Button></div></div>
+            <div className="grid gap-10 lg:grid-cols-[1.8fr_1fr] lg:items-end"><div><p className="mb-6 text-xs font-black uppercase">Available for junior opportunities</p><h2 className="font-display text-5xl font-black uppercase leading-[.9] sm:text-7xl lg:text-8xl">Let&apos;s build something meaningful.</h2></div><div><p className="max-w-sm text-base leading-7 opacity-80">Based in Karachi, Pakistan. Available for full-time junior roles with one-week notice, plus collaborations and thoughtful web projects.</p><Button asChild variant="secondary" size="lg" className="mt-7"><a href="https://share.google/EhcQoDZuYhE8hUHw1" target="_blank" rel="noreferrer">View portfolio profile <ArrowUpRight /></a></Button></div></div>
           </div>
         </section>
       </main>

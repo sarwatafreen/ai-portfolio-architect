@@ -2,7 +2,7 @@ export const portfolioKnowledge = `
 Sarwat Afreen is based in Karachi, Pakistan. She is a student and junior frontend and AI web developer with approximately two months of practical learning experience. She is open to full-time junior opportunities with one-week notice. Her stated expected salary is PKR 80,000 per month.
 
 Frontend skills: HTML, CSS, JavaScript, TypeScript, React, Next.js, Tailwind CSS, Chakra UI, responsive design, and Figma-to-React implementation.
-Backend and web platform knowledge: Lovable Cloud, authentication, database and API concepts, domains, hosting, and SSL.
+Backend and web platform knowledge: Supabase, authentication, database and API concepts, domains, hosting, and SSL.
 AI learning areas: generative AI, prompt engineering, AI automation, MCP, RAG, agent workflows, Pydantic, and vector database concepts.
 Additional skills: Python, Excel, basic WordPress and Elementor, UI/UX, graphic design, and Web3 concepts. Shopify and WooCommerce are not practical-experience claims.
 
