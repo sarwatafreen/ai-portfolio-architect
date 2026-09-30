@@ -66,25 +66,25 @@ const skillGroups = [
     number: "01",
     title: "Frontend",
     icon: Code2,
-    items: ["HTML & CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
+    items: ["HTML & CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Chakra UI", "Responsive design"],
   },
   {
     number: "02",
     title: "Backend & data",
     icon: Database,
-    items: ["Supabase", "Authentication", "Database concepts", "API integration"],
+    items: ["Supabase", "Authentication", "Database & API concepts", "Domains, hosting & SSL"],
   },
   {
     number: "03",
     title: "AI systems",
     icon: BrainCircuit,
-    items: ["Generative AI", "Prompt engineering", "AI automation", "MCP", "RAG concepts", "Agent workflows"],
+    items: ["Generative AI", "Prompt engineering", "AI automation", "MCP", "RAG concepts", "Agent workflows", "Pydantic", "Vector database concepts"],
   },
   {
     number: "04",
     title: "Design & tools",
     icon: Figma,
-    items: ["UI / UX", "Figma", "Graphic design", "Git & GitHub", "Vercel", "Responsive design"],
+    items: ["UI / UX", "Figma to React", "Graphic design", "Python", "Excel", "WordPress & Elementor (basic)", "Web3 concepts"],
   },
 ];
 
