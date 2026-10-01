@@ -19,3 +19,10 @@
 - [x] Add a searchable learning journal with structured article cards.
 - [x] Verify assistant behavior, interactions, accessibility, and desktop/mobile layouts.
 - [ ] AI Content Studio app (uploaded brief) — start after portfolio sign-off.
+
+## Approved visual refresh
+
+- [ ] Refine the existing Deep Ink, Porcelain, Cobalt, Teal, and Coral color system.
+- [ ] Improve typography, spacing, and hero hierarchy without changing content.
+- [ ] Restyle project and service cards while preserving filters and interactions.
+- [ ] Verify desktop, tablet, mobile, overflow, images, and runtime health.
