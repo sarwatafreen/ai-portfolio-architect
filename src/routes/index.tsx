@@ -18,6 +18,7 @@ import {
   WandSparkles,
 } from "lucide-react";
 import aiStudioImage from "@/assets/ai-studio-showcase.jpg";
+import portrait from "@/assets/sarwat-portrait.png.asset.json";
 import { ProjectExplorer } from "@/components/portfolio/ProjectExplorer";
 import { LearningJournal } from "@/components/portfolio/LearningJournal";
 import { PortfolioAssistant } from "@/components/portfolio/PortfolioAssistant";
@@ -159,9 +160,10 @@ function Portfolio() {
       <Header />
       <main>
         <section className="hero-grid relative flex min-h-[94svh] items-end pt-28">
-          <div className="pointer-events-none absolute right-[8%] top-[18%] hidden h-64 w-64 rounded-full border border-primary/20 lg:block" aria-hidden="true">
-            <div className="absolute inset-8 rounded-full border border-primary/25" /><div className="absolute inset-16 rounded-full border border-primary/30" />
-            <Sparkles className="absolute left-1/2 top-1/2 size-9 -translate-x-1/2 -translate-y-1/2 text-primary" />
+          <div className="absolute right-[7%] top-[16%] z-10 hidden size-72 rounded-full border border-primary/30 p-3 lg:block">
+            <div className="absolute -inset-5 rounded-full border border-teal/20" aria-hidden="true" />
+            <img src={portrait.url} alt="Sarwat Afreen, frontend and AI web developer" className="size-full rounded-full object-cover" width={288} height={288} />
+            <span className="absolute -bottom-1 left-6 flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs font-bold text-foreground"><Sparkles className="size-3.5 text-coral" /> Design · Code · AI</span>
           </div>
           <div className="relative mx-auto w-full max-w-7xl px-5 pb-14 sm:px-8 sm:pb-18">
             <div className="mb-8 flex items-center gap-3 text-xs font-bold uppercase text-muted-foreground"><span className="inline-block size-2 animate-pulse rounded-full bg-primary" /><span>Open to junior opportunities</span><span className="hidden text-border sm:inline">—</span><span className="hidden sm:inline">Karachi, Pakistan</span></div>
@@ -188,9 +190,12 @@ function Portfolio() {
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <SectionHeading index="01" eyebrow="About" title="Curious by nature. Intentional by design." />
             <div className="mt-14 grid gap-8 md:grid-cols-[1fr_2fr]">
-              <figure aria-label="Professional portrait area ready for Sarwat's photo" className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-[4rem] border border-border bg-gradient-to-br from-cobalt/25 via-secondary to-teal/25">
-                {/* Portrait slot: replace this block with Sarwat's uploaded photo */}
-                <div className="absolute inset-0 blueprint-grid" /><figcaption className="absolute bottom-8 left-8 right-8"><span className="font-display text-7xl font-bold text-primary">SA.</span><p className="mt-3 text-sm text-muted-foreground">Learner · Builder · Designer</p></figcaption>
+              <figure className="mx-auto w-full max-w-sm text-center">
+                <div className="relative mx-auto aspect-square w-full max-w-[19rem] rounded-full bg-gradient-to-br from-cobalt/40 via-secondary to-teal/40 p-2">
+                  <img src={portrait.url} alt="Portrait of Sarwat Afreen" loading="lazy" className="size-full rounded-full object-cover" width={304} height={304} />
+                  <span className="absolute right-4 top-6 size-4 rounded-full bg-coral" aria-hidden="true" />
+                </div>
+                <figcaption className="mt-6"><span className="font-display text-2xl font-bold text-foreground">Sarwat Afreen</span><p className="mt-1 text-sm text-muted-foreground">Learner · Builder · Designer</p></figcaption>
               </figure>
               <div className="grid content-between gap-12">
                 <p className="font-display text-2xl font-semibold leading-snug text-foreground sm:text-3xl">I&apos;m a student and emerging developer focused on the space where modern frontend craft, visual thinking, and practical AI meet.</p>
