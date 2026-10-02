@@ -13,7 +13,7 @@
 ## Client-ready portfolio expansion
 
 - [x] Replace the neon visual system with the selected premium AI Architect direction.
-- [ ] Insert Sarwat's professional photo (waiting on upload; frame ready).
+- [x] Insert Sarwat's professional photo in the approved round frames.
 - [x] Add a real, grounded portfolio assistant with one browser-saved conversation.
 - [x] Add technology, category, and project-type filters.
 - [x] Add a searchable learning journal with structured article cards.
@@ -22,7 +22,13 @@
 
 ## Approved visual refresh
 
-- [ ] Refine the existing Deep Ink, Porcelain, Cobalt, Teal, and Coral color system.
-- [ ] Improve typography, spacing, and hero hierarchy without changing content.
-- [ ] Restyle project and service cards while preserving filters and interactions.
+- [x] Refine the existing Deep Ink, Porcelain, Cobalt, Teal, and Coral color system.
+- [x] Improve typography, spacing, and hero hierarchy without changing content.
+- [x] Restyle project and service cards while preserving filters and interactions.
 - [ ] Verify desktop, tablet, mobile, overflow, images, and runtime health.
+
+## Contact inquiries
+
+- [x] Store validated portfolio inquiries securely.
+- [ ] Display Sarwat's real email and phone number (waiting on details).
+- [ ] Email new inquiries to Sarwat (waiting on recipient address and verified sender domain).

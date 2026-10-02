@@ -35,7 +35,7 @@ export function ProjectExplorer() {
 
   return (
     <div className="mt-14">
-      <div className="grid gap-3 border-y border-border py-5 sm:grid-cols-3 lg:grid-cols-[1fr_1fr_1fr_auto]">
+      <div className="grid gap-4 border-y border-border py-7 sm:grid-cols-3 lg:grid-cols-[1fr_1fr_1fr_auto]">
         {[
           { label: "Technology", value: technology, set: setTechnology, options: technologies },
           { label: "Category", value: category, set: setCategory, options: categories },
@@ -61,15 +61,15 @@ export function ProjectExplorer() {
           <Button className="mt-6" onClick={reset}>Clear filters</Button>
         </div>
       ) : (
-        <div className="mt-5 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {filtered.map((project) => (
-            <article key={project.title} className="group overflow-hidden border border-border bg-card transition-colors hover:border-cobalt/50">
-              {project.featured ? <div className="aspect-[16/9] overflow-hidden border-b border-border"><img src={aiStudioImage} alt="AI Content Studio interface concept" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]" width={1600} height={1000} /></div> : <div className="blueprint-grid grid aspect-[16/9] place-items-center border-b border-border"><span className="font-display text-5xl font-bold text-cobalt/70">{project.title.split(" ").map((word) => word[0]).join("")}</span></div>}
-              <div className="p-6">
-                <span className="text-xs font-bold uppercase text-teal">{project.status}</span>
-                <h3 className="mt-4 font-display text-2xl font-bold">{project.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-muted-foreground">{project.summary}</p>
-                <div className="mt-6 flex flex-wrap gap-2">{project.technologies.map((tag) => <span key={tag} className="border border-border bg-secondary px-2.5 py-1 text-xs text-secondary-foreground">{tag}</span>)}</div>
+            <article key={project.title} className="group premium-card overflow-hidden border border-border bg-card transition-[transform,border-color] duration-300 hover:-translate-y-1 hover:border-cobalt/60">
+              {project.featured ? <div className="aspect-[16/9] overflow-hidden border-b border-border"><img src={aiStudioImage} alt="AI Content Studio interface concept" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]" width={1600} height={1000} /></div> : <div className="blueprint-grid relative grid aspect-[16/9] place-items-center overflow-hidden border-b border-border"><span className="absolute left-5 top-5 text-[0.65rem] font-bold uppercase text-muted-foreground">Selected work</span><span className="font-display text-5xl font-extrabold text-cobalt/75">{project.title.split(" ").map((word) => word[0]).join("")}</span><span className="absolute bottom-0 left-0 h-1 w-16 bg-coral transition-[width] duration-300 group-hover:w-full" /></div>}
+              <div className="p-7">
+                <div className="flex items-center gap-3"><span className="size-1.5 rounded-full bg-teal" /><span className="text-xs font-bold uppercase text-teal">{project.status}</span></div>
+                <h3 className="mt-5 font-display text-2xl font-bold">{project.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-muted-foreground">{project.summary}</p>
+                <div className="mt-7 flex flex-wrap gap-2">{project.technologies.map((tag) => <span key={tag} className="border border-border bg-secondary px-2.5 py-1 text-xs text-secondary-foreground">{tag}</span>)}</div>
               </div>
             </article>
           ))}
