@@ -38,6 +38,7 @@
   --color-ink-muted: var(--ink-muted);
   --color-porcelain: var(--porcelain);
   --color-cobalt: var(--cobalt);
+  --color-violet: var(--violet);
   --color-teal: var(--teal);
   --color-coral: var(--coral);
 }
@@ -71,6 +72,7 @@
   --ink-muted: oklch(0.76 0.03 255);
   --porcelain: oklch(0.965 0.006 255);
   --cobalt: oklch(0.65 0.18 255);
+  --violet: oklch(0.68 0.2 303);
   --teal: oklch(0.71 0.13 183);
   --coral: oklch(0.71 0.15 35);
 }
@@ -100,4 +102,4 @@ body { margin: 0; background: var(--color-background); color: var(--color-foregr
 
 .blueprint-grid { background-image: linear-gradient(color-mix(in oklab, var(--cobalt) 14%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in oklab, var(--cobalt) 14%, transparent) 1px, transparent 1px); background-size: 32px 32px; }
 .premium-card { box-shadow: 0 24px 70px color-mix(in oklab, var(--background) 58%, transparent); }
-.portrait-ring { box-shadow: 0 0 0 1px color-mix(in oklab, var(--cobalt) 22%, transparent), 0 30px 80px color-mix(in oklab, var(--cobalt) 18%, transparent); }
+.portrait-ring { box-shadow: 0 0 0 1px color-mix(in oklab, var(--violet) 42%, transparent), 0 30px 80px color-mix(in oklab, var(--violet) 24%, transparent); }

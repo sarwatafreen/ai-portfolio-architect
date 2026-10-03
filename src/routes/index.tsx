@@ -18,7 +18,7 @@ import {
   WandSparkles,
 } from "lucide-react";
 import aiStudioImage from "@/assets/ai-studio-showcase.jpg";
-import portrait from "@/assets/sarwat-portrait.png.asset.json";
+import portrait from "@/assets/sarwat-portrait-current.png.asset.json";
 import { ProjectExplorer } from "@/components/portfolio/ProjectExplorer";
 import { LearningJournal } from "@/components/portfolio/LearningJournal";
 import { PortfolioAssistant } from "@/components/portfolio/PortfolioAssistant";
@@ -163,9 +163,9 @@ function Portfolio() {
         <section className="hero-grid relative flex min-h-[94svh] items-end overflow-hidden pt-28">
           <div className="absolute inset-y-0 right-[18%] hidden w-px bg-border/60 lg:block" aria-hidden="true" />
           <div className="absolute right-[6%] top-[15%] z-10 hidden size-72 rounded-full p-3 lg:block xl:size-80">
-            <div className="absolute -inset-8 rounded-full border border-teal/20" aria-hidden="true" />
-            <div className="absolute -inset-3 rounded-full border border-cobalt/30" aria-hidden="true" />
-            <img src={portrait.url} alt="Sarwat Afreen, frontend and AI web developer" className="portrait-ring size-full rounded-full object-cover" width={320} height={320} />
+            <div className="absolute -inset-8 rounded-full border border-violet/30" aria-hidden="true" />
+            <div className="absolute -inset-3 rounded-full border border-primary/40" aria-hidden="true" />
+            <img src={portrait.url} alt="Sarwat Afreen, frontend and AI web developer" className="portrait-ring size-full rounded-full object-cover object-center" width={320} height={320} />
             <span className="absolute -bottom-2 left-7 flex items-center gap-2 rounded-full border border-border bg-card/95 px-4 py-2 text-xs font-bold text-foreground shadow-xl"><Sparkles className="size-3.5 text-coral" /> Design · Code · AI</span>
           </div>
           <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8 sm:pb-20 lg:pb-24">
@@ -194,8 +194,8 @@ function Portfolio() {
             <SectionHeading index="01" eyebrow="About" title="Curious by nature. Intentional by design." />
             <div className="mt-16 grid gap-12 md:grid-cols-[1fr_2fr] md:items-center lg:mt-20">
               <figure className="mx-auto w-full max-w-sm text-center">
-                <div className="portrait-ring relative mx-auto aspect-square w-full max-w-[19rem] rounded-full bg-gradient-to-br from-cobalt/50 via-secondary to-teal/45 p-2">
-                  <img src={portrait.url} alt="Portrait of Sarwat Afreen" loading="lazy" className="size-full rounded-full object-cover" width={304} height={304} />
+                <div className="portrait-ring relative mx-auto aspect-square w-full max-w-[19rem] rounded-full bg-gradient-to-br from-violet/65 via-secondary to-primary/50 p-2">
+                  <img src={portrait.url} alt="Portrait of Sarwat Afreen" loading="lazy" className="size-full rounded-full object-cover object-center" width={304} height={304} />
                   <span className="absolute right-4 top-6 size-4 rounded-full bg-coral" aria-hidden="true" />
                 </div>
                 <figcaption className="mt-6"><span className="font-display text-2xl font-bold text-foreground">Sarwat Afreen</span><p className="mt-1 text-sm text-muted-foreground">Learner · Builder · Designer</p></figcaption>
