@@ -29,14 +29,12 @@ export function PortfolioAssistant() {
       window.localStorage.removeItem(STORAGE_KEY);
     }
     setHydrated(true);
-    textareaRef.current?.focus();
   }, [setMessages]);
 
   useEffect(() => {
     if (!hydrated) return;
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
-    if (status === "ready" || status === "error") textareaRef.current?.focus();
-  }, [hydrated, messages, status]);
+  }, [hydrated, messages]);
 
   const ask = (text: string) => {
     if (!text.trim() || status === "submitted" || status === "streaming") return;
