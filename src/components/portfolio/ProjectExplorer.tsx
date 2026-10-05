@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Layers3, RotateCcw } from "lucide-react";
+import { ArrowUpRight, Layers3, RotateCcw } from "lucide-react";
 import aiStudioImage from "@/assets/ai-studio-showcase.jpg";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -70,6 +70,11 @@ export function ProjectExplorer() {
                 <h3 className="mt-5 font-display text-2xl font-bold">{project.title}</h3>
                 <p className="mt-4 text-sm leading-7 text-muted-foreground">{project.summary}</p>
                 <div className="mt-7 flex flex-wrap gap-2">{project.technologies.map((tag) => <span key={tag} className="border border-border bg-secondary px-2.5 py-1 text-xs text-secondary-foreground">{tag}</span>)}</div>
+                {project.url ? (
+                  <a href={project.url} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-1.5 text-sm font-bold text-cobalt underline decoration-coral/60 decoration-2 underline-offset-4 transition-colors hover:text-teal">
+                    View Project<ArrowUpRight className="size-4" aria-hidden="true" />
+                  </a>
+                ) : null}
               </div>
             </article>
           ))}
