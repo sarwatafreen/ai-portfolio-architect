@@ -11,7 +11,52 @@ Featured project: AI-Powered Content Studio & Digital Products Hub. It is an evo
 Services Sarwat can discuss: responsive frontend development, UI design to code, AI-assisted web experiences, prompt systems, and early-stage product concepts. The portfolio does not provide an email address, phone number, GitHub profile, client testimonials, employer history, or verified external social links. Visitors can use the portfolio profile link in the contact section.
 `.trim();
 
-export const projects = [
+export const projects: ReadonlyArray<{
+  title: string;
+  status: string;
+  summary: string;
+  technologies: readonly string[];
+  category: string;
+  type: string;
+  featured: boolean;
+  url?: string;
+}> = [
+  {
+    title: "Zyentic — Quiet Luxury, Couture Maison",
+    status: "Live project",
+    summary: "A quiet-luxury couture maison website with an elegant, restrained visual direction.",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    category: "Frontend",
+    type: "Client-style project",
+    featured: false,
+  },
+  {
+    title: "Hello from PhysicalAI Course Book",
+    status: "Live project",
+    summary: "An interactive course book experience exploring physical AI concepts.",
+    technologies: ["React", "TypeScript", "AI"],
+    category: "AI experience",
+    type: "Learning project",
+    featured: false,
+  },
+  {
+    title: "Sarwat Afreen — Creative Developer Portfolio",
+    status: "Live project",
+    summary: "A creative developer portfolio presenting projects, skills, and a grounded AI assistant.",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "AI"],
+    category: "Frontend",
+    type: "Portfolio feature",
+    featured: false,
+  },
+  {
+    title: "Todo App — Manage Your Tasks",
+    status: "Live project",
+    summary: "A clean task manager for adding, organizing, and completing daily tasks.",
+    technologies: ["React", "TypeScript"],
+    category: "Frontend",
+    type: "Learning project",
+    featured: false,
+  },
   {
     title: "AI Content Studio",
     status: "Concept in progress",
