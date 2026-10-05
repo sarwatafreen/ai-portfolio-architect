@@ -29,6 +29,7 @@ export const projects: ReadonlyArray<{
     category: "Frontend",
     type: "Client-style project",
     featured: false,
+    url: "https://zyentic-luxe-emporium-jsuk.vercel.app/",
   },
   {
     title: "Hello from PhysicalAI Course Book",
@@ -38,6 +39,7 @@ export const projects: ReadonlyArray<{
     category: "AI experience",
     type: "Learning project",
     featured: false,
+    url: "https://hackathon-course-book.vercel.app/",
   },
   {
     title: "Sarwat Afreen — Creative Developer Portfolio",
@@ -47,6 +49,7 @@ export const projects: ReadonlyArray<{
     category: "Frontend",
     type: "Portfolio feature",
     featured: false,
+    url: "https://cinematic-canvas-02.vercel.app/",
   },
   {
     title: "Todo App — Manage Your Tasks",
@@ -56,6 +59,7 @@ export const projects: ReadonlyArray<{
     category: "Frontend",
     type: "Learning project",
     featured: false,
+    url: "https://todo-six-neon-69.vercel.app/",
   },
   {
     title: "AI Content Studio",
