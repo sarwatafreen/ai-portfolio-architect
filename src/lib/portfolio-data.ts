@@ -8,6 +8,8 @@ Additional skills: Python, Excel, basic WordPress and Elementor, UI/UX, graphic 
 
 Featured project: AI-Powered Content Studio & Digital Products Hub. It is an evolving product concept for small businesses, creators, boutiques, and startups. Planned services include AI Content Creation, Brand Identity, Website Content, AI Chatbot Setup, Prompt Engineering, and Marketing Strategy. Planned digital products include AI Prompt Bundle ($19), Instagram Canva Kit ($29), and Business Branding Kit ($49). Authentication, cart, wishlist, orders, and admin features are planned rather than launched.
 
+Additional live practice builds: a personal portfolio layout on a ready-made template (hack-tempatale8) and a furniture storefront interface called Comforty on a ready-made template (hamzah-syed-template-8). Both are template-based learning builds for practising layout, responsiveness, and shop interfaces — not client work and not original designs.
+
 Services Sarwat can discuss: responsive frontend development, UI design to code, AI-assisted web experiences, prompt systems, and early-stage product concepts. The portfolio does not provide an email address, phone number, GitHub profile, client testimonials, employer history, or verified external social links. Visitors can use the portfolio profile link in the contact section.
 `.trim();
 
@@ -60,6 +62,26 @@ export const projects: ReadonlyArray<{
     type: "Learning project",
     featured: false,
     url: "https://todo-six-neon-69.vercel.app/",
+  },
+  {
+    title: "Portfolio Site — Graphic Designer & Front-end Developer",
+    status: "Live project",
+    summary: "A personal portfolio layout on a ready-made template, adapted for a graphic designer and front-end developer profile.",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    category: "Frontend",
+    type: "Template practice build",
+    featured: false,
+    url: "https://hack-tempatale8.vercel.app/",
+  },
+  {
+    title: "Comforty — Furniture Storefront",
+    status: "Live project",
+    summary: "A furniture storefront interface on a ready-made template, with product grid, categories, and cart layout.",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    category: "E-commerce",
+    type: "Template practice build",
+    featured: false,
+    url: "https://hamzah-syed-template-8.vercel.app/",
   },
   {
     title: "AI Content Studio",
