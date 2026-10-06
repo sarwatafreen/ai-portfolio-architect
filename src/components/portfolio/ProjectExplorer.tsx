@@ -5,6 +5,12 @@ import { ArrowUpRight, Layers3, RotateCcw } from "lucide-react";
 import aiStudioImage from "@/assets/ai-studio-showcase.jpg";
 import portfolioSiteImage from "@/assets/portfolio-site-card.jpg";
 import comfortyImage from "@/assets/comforty-project-card.png.asset.json";
+import zyenticImage from "@/assets/zyentic-project-card.png.asset.json";
+import physicalaiImage from "@/assets/physicalai-project-card.jpeg.asset.json";
+import sarwatPortfolioImage from "@/assets/sarwat-portfolio-project-card.jpeg.asset.json";
+import todoImage from "@/assets/todo-project-card.jpeg.asset.json";
+import intelligenceImage from "@/assets/portfolio-intelligence-project-card.jpeg.asset.json";
+import responsiveStudiesImage from "@/assets/responsive-studies-project-card.jpeg.asset.json";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { projects } from "@/lib/portfolio-data";
@@ -12,6 +18,42 @@ import { projects } from "@/lib/portfolio-data";
 const ALL = "All";
 
 const projectVisuals: Record<string, { src: string; alt: string; width: number; height: number }> = {
+  "Zyentic — Quiet Luxury, Couture Maison": {
+    src: zyenticImage.url,
+    alt: "Uploaded Zyentic couture storefront visual with tailored clothing and a featured collection",
+    width: 1536,
+    height: 1024,
+  },
+  "Hello from PhysicalAI Course Book": {
+    src: physicalaiImage.url,
+    alt: "Uploaded PhysicalAI course book visual with desktop and mobile learning interfaces",
+    width: 777,
+    height: 524,
+  },
+  "Sarwat Afreen — Creative Developer Portfolio": {
+    src: sarwatPortfolioImage.url,
+    alt: "Uploaded Sarwat Afreen creative developer portfolio visual on desktop and mobile",
+    width: 783,
+    height: 487,
+  },
+  "Todo App — Manage Your Tasks": {
+    src: todoImage.url,
+    alt: "Uploaded Todo App visual with task lists on desktop and mobile",
+    width: 750,
+    height: 515,
+  },
+  "Portfolio Intelligence": {
+    src: intelligenceImage.url,
+    alt: "Uploaded Portfolio Intelligence visual showing the grounded portfolio assistant conversation",
+    width: 761,
+    height: 569,
+  },
+  "Responsive Interface Studies": {
+    src: responsiveStudiesImage.url,
+    alt: "Uploaded Responsive Interface Studies visual showing a task interface across laptop, tablet, and phone",
+    width: 1535,
+    height: 472,
+  },
   "Portfolio Site — Graphic Designer & Front-end Developer": {
     src: portfolioSiteImage,
     alt: "Purple creative portfolio interface concept with graphic design, brand identity, and mobile UI work",
