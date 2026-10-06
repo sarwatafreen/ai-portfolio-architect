@@ -12,3 +12,4 @@
 - Keep curated portfolio facts in `src/lib/portfolio-data.ts` so the visible portfolio and grounded assistant share one source of truth.
 - The portfolio assistant is a single browser-local conversation; only its model request streams through `/api/chat`.
 - Public contact inquiries are validated in `/api/contact` and stored privately in `contact_submissions`; never expose them to anonymous reads.
+- Keep project-card visual mappings in ProjectExplorer separate from curated project facts, so presentation-only image updates do not alter assistant grounding or filtering.

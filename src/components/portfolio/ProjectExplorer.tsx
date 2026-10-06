@@ -3,11 +3,28 @@
 import { useMemo, useState } from "react";
 import { ArrowUpRight, Layers3, RotateCcw } from "lucide-react";
 import aiStudioImage from "@/assets/ai-studio-showcase.jpg";
+import portfolioSiteImage from "@/assets/portfolio-site-card.jpg";
+import comfortyImage from "@/assets/comforty-project-card.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { projects } from "@/lib/portfolio-data";
 
 const ALL = "All";
+
+const projectVisuals: Record<string, { src: string; alt: string; width: number; height: number }> = {
+  "Portfolio Site — Graphic Designer & Front-end Developer": {
+    src: portfolioSiteImage,
+    alt: "Purple creative portfolio interface concept with graphic design, brand identity, and mobile UI work",
+    width: 1600,
+    height: 912,
+  },
+  "Comforty — Furniture Storefront": {
+    src: comfortyImage.url,
+    alt: "Comforty furniture storefront visual with a modern living room and sofa, chair, dining table, and bed products",
+    width: 1152,
+    height: 768,
+  },
+};
 
 function unique(values: readonly string[]) {
   return [ALL, ...Array.from(new Set(values))];
@@ -62,9 +79,11 @@ export function ProjectExplorer() {
         </div>
       ) : (
         <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {filtered.map((project) => (
+          {filtered.map((project) => {
+            const visual = projectVisuals[project.title];
+            return (
             <article key={project.title} className="group premium-card overflow-hidden border border-border bg-card transition-[transform,border-color] duration-300 hover:-translate-y-1 hover:border-cobalt/60">
-              {project.featured ? <div className="aspect-[16/9] overflow-hidden border-b border-border"><img src={aiStudioImage} alt="AI Content Studio interface concept" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]" width={1600} height={1000} /></div> : <div className="blueprint-grid relative grid aspect-[16/9] place-items-center overflow-hidden border-b border-border"><span className="absolute left-5 top-5 text-[0.65rem] font-bold uppercase text-muted-foreground">Selected work</span><span className="font-display text-5xl font-extrabold text-cobalt/75">{project.title.split(" ").map((word) => word[0]).join("")}</span><span className="absolute bottom-0 left-0 h-1 w-16 bg-coral transition-[width] duration-300 group-hover:w-full" /></div>}
+               {visual ? <div className="aspect-[16/9] overflow-hidden border-b border-border bg-secondary"><img src={visual.src} alt={visual.alt} width={visual.width} height={visual.height} loading="lazy" className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.025]" /></div> : project.featured ? <div className="aspect-[16/9] overflow-hidden border-b border-border"><img src={aiStudioImage} alt="AI Content Studio interface concept" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]" width={1600} height={1000} /></div> : <div className="blueprint-grid relative grid aspect-[16/9] place-items-center overflow-hidden border-b border-border"><span className="absolute left-5 top-5 text-[0.65rem] font-bold uppercase text-muted-foreground">Selected work</span><span className="font-display text-5xl font-extrabold text-cobalt/75">{project.title.split(" ").map((word) => word[0]).join("")}</span><span className="absolute bottom-0 left-0 h-1 w-16 bg-coral transition-[width] duration-300 group-hover:w-full" /></div>}
               <div className="p-7">
                 <div className="flex items-center gap-3"><span className="size-1.5 rounded-full bg-teal" /><span className="text-xs font-bold uppercase text-teal">{project.status}</span></div>
                 <h3 className="mt-5 font-display text-2xl font-bold">{project.title}</h3>
@@ -77,7 +96,8 @@ export function ProjectExplorer() {
                 ) : null}
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>

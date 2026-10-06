@@ -32,6 +32,8 @@
 - [x] Add Zyentic, PhysicalAI Course Book, Creative Developer Portfolio, and Todo App with their real Vercel links.
 - [x] Add Portfolio Site — Graphic Designer & Front-end Developer (hack-tempatale8) and Comforty — Furniture Storefront (hamzah-syed-template-8) as template practice builds.
 - [x] Verify all six "View Project" buttons open in a new tab on desktop, tablet, and mobile.
+- [x] Add dedicated Portfolio Site and Comforty visuals without changing project facts or card layout.
+- [x] Verify both new images on desktop, tablet, and mobile.
 
 ## Contact inquiries
 
