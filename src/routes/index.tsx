@@ -18,7 +18,7 @@ import {
   WandSparkles,
 } from "lucide-react";
 import aiStudioImage from "@/assets/ai-studio-showcase.jpg";
-import portrait from "@/assets/sarwat-portrait-2026-10.jpeg.asset.json";
+import portrait from "@/assets/sarwat-portrait-2026-10-06.png.asset.json";
 import { ProjectExplorer } from "@/components/portfolio/ProjectExplorer";
 import { LearningJournal } from "@/components/portfolio/LearningJournal";
 import { PortfolioAssistant } from "@/components/portfolio/PortfolioAssistant";
