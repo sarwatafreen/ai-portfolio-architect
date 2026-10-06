@@ -79,9 +79,11 @@ export function ProjectExplorer() {
         </div>
       ) : (
         <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {filtered.map((project) => (
+          {filtered.map((project) => {
+            const visual = projectVisuals[project.title];
+            return (
             <article key={project.title} className="group premium-card overflow-hidden border border-border bg-card transition-[transform,border-color] duration-300 hover:-translate-y-1 hover:border-cobalt/60">
-               {projectVisuals[project.title] ? <div className="aspect-[16/9] overflow-hidden border-b border-border bg-secondary"><img src={projectVisuals[project.title].src} alt={projectVisuals[project.title].alt} width={projectVisuals[project.title].width} height={projectVisuals[project.title].height} loading="lazy" className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.025]" /></div> : project.featured ? <div className="aspect-[16/9] overflow-hidden border-b border-border"><img src={aiStudioImage} alt="AI Content Studio interface concept" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]" width={1600} height={1000} /></div> : <div className="blueprint-grid relative grid aspect-[16/9] place-items-center overflow-hidden border-b border-border"><span className="absolute left-5 top-5 text-[0.65rem] font-bold uppercase text-muted-foreground">Selected work</span><span className="font-display text-5xl font-extrabold text-cobalt/75">{project.title.split(" ").map((word) => word[0]).join("")}</span><span className="absolute bottom-0 left-0 h-1 w-16 bg-coral transition-[width] duration-300 group-hover:w-full" /></div>}
+               {visual ? <div className="aspect-[16/9] overflow-hidden border-b border-border bg-secondary"><img src={visual.src} alt={visual.alt} width={visual.width} height={visual.height} loading="lazy" className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.025]" /></div> : project.featured ? <div className="aspect-[16/9] overflow-hidden border-b border-border"><img src={aiStudioImage} alt="AI Content Studio interface concept" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]" width={1600} height={1000} /></div> : <div className="blueprint-grid relative grid aspect-[16/9] place-items-center overflow-hidden border-b border-border"><span className="absolute left-5 top-5 text-[0.65rem] font-bold uppercase text-muted-foreground">Selected work</span><span className="font-display text-5xl font-extrabold text-cobalt/75">{project.title.split(" ").map((word) => word[0]).join("")}</span><span className="absolute bottom-0 left-0 h-1 w-16 bg-coral transition-[width] duration-300 group-hover:w-full" /></div>}
               <div className="p-7">
                 <div className="flex items-center gap-3"><span className="size-1.5 rounded-full bg-teal" /><span className="text-xs font-bold uppercase text-teal">{project.status}</span></div>
                 <h3 className="mt-5 font-display text-2xl font-bold">{project.title}</h3>
@@ -94,7 +96,8 @@ export function ProjectExplorer() {
                 ) : null}
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>
