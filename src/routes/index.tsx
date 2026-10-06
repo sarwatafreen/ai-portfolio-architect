@@ -18,7 +18,7 @@ import {
   WandSparkles,
 } from "lucide-react";
 import aiStudioImage from "@/assets/ai-studio-showcase.jpg";
-import portrait from "@/assets/sarwat-portrait-current.png.asset.json";
+import portrait from "@/assets/sarwat-portrait-2026-10.jpeg.asset.json";
 import { ProjectExplorer } from "@/components/portfolio/ProjectExplorer";
 import { LearningJournal } from "@/components/portfolio/LearningJournal";
 import { PortfolioAssistant } from "@/components/portfolio/PortfolioAssistant";
@@ -173,6 +173,7 @@ function Portfolio() {
             <h1 className="max-w-5xl font-display text-[2.8rem] font-black uppercase leading-[0.86] text-foreground sm:text-[clamp(3.7rem,9vw,8.4rem)]">
               Building the web <span className="text-outline">with intelligence.</span>
             </h1>
+            <p className="mt-7 text-xs font-bold uppercase tracking-[0.28em] text-teal">Curious by nature. Intentional by design.</p>
             <div className="mt-12 grid gap-8 md:grid-cols-[1fr_1.2fr] md:items-end lg:mt-16">
               <div className="hidden items-center gap-4 md:flex"><span className="h-px w-20 bg-coral" /><ArrowDownRight className="size-8 text-coral" /></div>
               <div>
