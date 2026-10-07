@@ -34,6 +34,12 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+// Lovable serves this immutable asset publicly; Vercel does not serve /__l5e paths.
+const portraitSrc = new URL(
+  portrait.url,
+  "https://id-preview--912f3eb1-930b-49ef-b152-e8ad9c5a1fd4.lovable.app",
+).href;
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -165,7 +171,7 @@ function Portfolio() {
           <div className="absolute right-[6%] top-[15%] z-10 hidden size-72 rounded-full p-3 lg:block xl:size-80">
             <div className="absolute -inset-8 rounded-full border border-violet/30" aria-hidden="true" />
             <div className="absolute -inset-3 rounded-full border border-primary/40" aria-hidden="true" />
-            <img src={portrait.url} alt="Sarwat Afreen, frontend and AI web developer" className="portrait-ring size-full rounded-full object-cover object-center" width={320} height={320} />
+            <img src={portraitSrc} alt="Sarwat Afreen, frontend and AI web developer" className="portrait-ring size-full rounded-full object-cover object-center" width={320} height={320} />
             <span className="absolute -bottom-2 left-7 flex items-center gap-2 rounded-full border border-border bg-card/95 px-4 py-2 text-xs font-bold text-foreground shadow-xl"><Sparkles className="size-3.5 text-coral" /> Design · Code · AI</span>
           </div>
           <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8 sm:pb-20 lg:pb-24">
@@ -196,7 +202,7 @@ function Portfolio() {
             <div className="mt-16 grid gap-12 md:grid-cols-[1fr_2fr] md:items-center lg:mt-20">
               <figure className="mx-auto w-full max-w-sm text-center">
                 <div className="portrait-ring relative mx-auto aspect-square w-full max-w-[19rem] rounded-full bg-gradient-to-br from-violet/65 via-secondary to-primary/50 p-2">
-                  <img src={portrait.url} alt="Portrait of Sarwat Afreen" loading="lazy" className="size-full rounded-full object-cover object-center" width={304} height={304} />
+                  <img src={portraitSrc} alt="Portrait of Sarwat Afreen" loading="lazy" className="size-full rounded-full object-cover object-center" width={304} height={304} />
                   <span className="absolute right-4 top-6 size-4 rounded-full bg-coral" aria-hidden="true" />
                 </div>
                 <figcaption className="mt-6"><span className="font-display text-2xl font-bold text-foreground">Sarwat Afreen</span><p className="mt-1 text-sm text-muted-foreground">Learner · Builder · Designer</p></figcaption>
